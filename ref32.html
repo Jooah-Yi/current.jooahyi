@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>단순한 수목의 투영</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>｢전주곡｣<br><br>나는 지금까지 살아 있다고 생각했을 뿐 실은 존재하지 않는지도 모른다. (…) 단순한 수목의 투영, 그저 낮에만 지면을 기어 다니는 귀신과도 같은 모습, 그마저도 곧 보이지 않게 되리니. 이윽고 수목의 사유가 우리의 머리 위를 점차 추월해 간다. (…)<br><br>『계절의 모노클』. 사가와 치카. 정수윤 옮김. 읻다. 2022</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>질서를 부여하고</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>1918년 이후 기계 미학을 수용한 디자이너들은 시각적 외관을 새로운 생산 방법에 따라 결정하려고 했다. 위원회의 표준화에는 종이 판형(1922), 기업 편지지(1924), 봉투(1924), 신문(1924), 도서 판형(1926) 등이 있다. 이후 수학적 계산을 기반으로 1923년 표준(DIN 198)에서 각 규격 판형에 맞는 인쇄물이 분류되었고, 포스터(A0)에서 우표(A13)까지 다양한 인쇄물에 질서를 부여하고 구조화했다.<br><br>『현대 타이포그래피—비판적 역사 에세이』. 로빈 킨로스 지음. 최성민 옮김. 작업실유령. 2020
+</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>
+
+

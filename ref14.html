@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>불현듯 도약하는</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>다만 시 쓰기는 헨젤과 그레텔처럼 부스러기의 궤적을 따라 하나의 길을 잇듯이 나아가는 것이 아니라 흩어진 파편 사이를 배회하다 불현듯 도약하는 경험과 닮아 있어요.</p>
+  <a href="https://magazine.beattitude.kr/visual-portfolio/kimliyoun/">https://magazine.beattitude.kr/visual-portfolio/kimliyoun/</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>
+

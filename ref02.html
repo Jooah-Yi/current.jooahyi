@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>깜빡임 영화</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"> <main class="fade-in">
+
+<a href="index.html" class="back-btn">돌아가기</a>
+
+  <p>깜빡임 영화. 쿠벨카 『아르눌프 라이너』<br><br>(…) 이것은 영화를 시퀀스, 장면, 숏을 중심으로 사고하는 것이 아니라 프레임 단위로 사고하는 방식이예요. 프레임을 이루는 기본 요소(빛과 어둠, 소리와 침묵)를 고려해 세심하게 구성한 일종의 ‘악구’들로 영화를 전개해 나가는 거죠. “영화는 프레임 사이에서 말한다”는 그의 말은 유명합니다.<br><br>『물듦 - 상호 감염의 미학』. 유운성. 전용완 디자인. 미디어버스. 2025</p>
+  <a href="https://www.kmdb.or.kr/story/14/1064">https://www.kmdb.or.kr/story/14/1064</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

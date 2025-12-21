@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>낮은 도. 또 낮은 도.</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>｢사운드트랙｣<br><br>눈이 그치고. 하늘은 맑다.<br><br>나무야.<br><br>나무야. 겨울나무야.<br><br>나무는 크다. 나무 옆에는 웅덩이. 웅덩이의 살얼음을 밟는 소리는 즐겁고 눈덩이는 가파르게 굴러오고 얼얼한 미래의 집에는 남은 선율이. 남은 사람이<br><br>망가진 피아노에 엎드려 흐느낌으로 건반을 두드리며<br><br>낮은 도. 또 낮은 도. 남은 옥타브에서. 활활 타는 난로에서. 때로는 예감. 때로는 반감. 때로는 소망. 음악은 무한.<br><br>랑데부는 어땠어?<br><br>(…)<br><br>『무족영원』(문학과지성 시인선 535). 신해욱. 문학과지성사. 2019</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>
+
+
+
+
+
+
+

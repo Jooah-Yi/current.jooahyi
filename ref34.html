@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아카이브를 욕망의 대상으로</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>아카이브와의 거리를 잃지 않으려면 아카이브를 욕망의 대상으로 삼지 않기 위해 항상 조심해야 한다. 물론 아카이브에 대한 ‘금욕 ascèse’이 아카이브와의 대화나 아카이브에의 감정이입을 일체 배제하는 것은 아니다. 대화란 융합이나 격차 제거가 아니라, 타자의 낯섦과 낯익음에 대한 인정이자 타자에게 똑똑한 질문, 효율적 질문을 제기하기 위한 필수 조건이다. 대화하려면 일단 대결해야 한다. 역사가가 아카이브의 불투명성, 아니 아카이브의 수수께끼에 가로믹히는 경우도 종종 있다.<br><br>『아카이브 취향』. 아틀레트 파르주. 김정아 옮김. 2020</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

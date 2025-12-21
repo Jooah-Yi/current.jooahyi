@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>일시적으로 어딘가를</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>전시할 장소를 먼저 정하지는 않았다. 오히려 이처럼 텍스트를 써서 발표하는 것도 전시 만들기(Exhibition-making)의 한 부분이라고 생각할 수 있다고 본다. 전시가, 작품들이 일시적으로 어떤 장소를 점거하는 것이라고 한다면, 텍스트를 어딘가에, 예를 들어 웹이나 종이 매체에 발표하는 행위도 일시적으로 그 장소를 점거하는 것이다.<br><br>『기록으로 돌아보기』. 다나카 고키, 김해주. 아트선재센터. 전용완 디자인. 2020</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

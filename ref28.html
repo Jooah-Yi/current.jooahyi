@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>분절과 지속</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>Apichatpong Weerasethakul, Durmiente & Async, 2017-2021<br><br>〈두르미엔테 & 에이싱크〉는 아피찻퐁이 영화 〈메모리아〉의 위성 작품인 〈두르미엔테〉를 기획하는 과정에서 자신의 단편 영화 〈에이싱크-새벽〉과의 연관성을 발견하고 두 영상을 결합해 완성한 비디오 설치 작품이다. 〈두르미엔테〉는 스페인어로 '잠자는 사람'을 의미하며, 보편적인 행위인 수면을 매개로 서로 다른 시간과 존재들이 연결되는 순간을 은유적으로 담아낸다. <에이싱크〉는 일본의 작곡가 류이치 사카모토의 음악과 아르세니 타르콥스키 시의 낭독이 결합된 사운드를 배경으로 하며, 아피찻퐁과 그의 친구들이 전 세계에서 촬영한 파편적인 영상들이 사운드와 얽히며 명상적인 분위기를 자아낸다. 작품은 낮에서 밤으로, 깨어있음에서 꿈으로 이어지는 과정과 시간의 흐름을 함축하는데, 〈에이싱크〉의 흐릿한 이미지 조각들은 〈두르미엔테〉에서 잠에 빠져드는 틸다 스윈튼을 촬영한 긴 촬영 장면과 공명하며 물리적 스크린의 경계 밖으로 확장된다. 작품은 서사적 구조를 해체하고 분절과 지속의 감각을 통해 관람객이 자신의 기억과 감각을 경유하게 함으로써 전통적인 이야기 전달 방식을 너머 부유하는 이미지들이 유기적으로 연결되도록 하는 새로운 영상미학을 구현한다</p>
+
+  <a href="https://akeroydcollection.com/works/durmiente-and-async">https://akeroydcollection.com/works/durmiente-and-async</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

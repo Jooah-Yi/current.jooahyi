@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>디지털화된 정동의 메커니즘에 구멍</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+
+    <a href="index.html" class="back-btn">돌아가기</a>
+
+  <p>실반 톰킨스 Sylvan Tomkins를 재독하며 아담 프랭크 Adam Frank와 함께 쓴 책에서 이브 세즈윅 Eve Kosofsky Sedgwick은 이렇게 말한다. “긍정적인 정서가 없다면 수치도 없다. 당신에게 즐거움을 주거나 흥미를 끄는 장면만이 당신에게 수치를 준다. (…) 수치심은, 몸의 표면이 갖는 취약함과 극도의 유연함을 통해 누군가의 내면을 바깥으로 표츌하거나 또는 외부를 안으로 끌어들인다. [역겨움과 마찬가지로] 수치는 디지털화된 정동의 메커니즘에 구멍을 내는 뚜렷한 정서 중 하나다.”<br><br>『진격하는 저급들: 퀴어 부정성과 시각문화』. 이연숙. 미디어버스. 2025</p>
+  <a href="https://archive.org/details/shameitssisterss0000sedg/page/n7/mode/2up">https://archive.org/details/shameitssisterss0000sedg/page/n7/mode/2up</a>
+</body>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

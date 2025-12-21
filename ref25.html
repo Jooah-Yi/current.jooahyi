@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>행위하는</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>그런데 나는 이렇게 묻고 싶다. 우리는 비인간 사물과 논바이너리 퀴어를 비인간(화 되는) 존재라는 이유로 다소 손쉽게 동일시하고 있는 것은 아닌가? 이 동일시는 이 둘에게서 이분법적 논리나 경계를 위반하는 존재라는 공통성만 남기고 오히려 사물에게서 사물성을, 퀴어에게서 퀴어성을 앗아가는 결과를 낳는 것은 아닐까? 또한 이렇게도 물어본다면 어떨까. 사물의 행위성은 이분법을 교란하고 해체하는 행위성을 통해서만 ‘부여’될 수 있는 것인가? 인간의 전유물로 여겨져 온 행위성이나 주체성, 역량을 사물에게도 ‘부여’하는 일은 사물을 인간화하는 시도와 어떻게 비슷하거나 다른가?<br><br>이러한 특성을 지닌 돌이 시에, “모든 것을 취소”하는 시에 빗대지는 것은 바로 돌은 인간의 언어가 통하지 않기에 인간이 언어를 무력하게 만드는 사물이기 때문이다. 돌의 완강한 부정성은 인간의 언어의 무력함이 폭로되게끔 한다. 여기서 돌의 행위성을 읽어낼 수 있다면, 이는 돌이 무언가를 하기 때문이 아니라 그 완강한 부정성이 인간의 행위성을 취소하고 무화시킨다는 의미에서 발휘하는 행위성이다.<br><br>｢돌, 퀴어, 언어｣. 김보경. 『현대문학. 2023 봄』</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

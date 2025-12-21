@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인용 앞에서 머뭇거리는</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>시간 기반 예술의 비평가는 시간 앞에서, 아니 더 정확히는 시간 속에서 머뭇거린다. 비평가는 그가 경험한 시간을 독자들에게 전달하고 싶지만 그것을 잘 ‘인용’할 방법을 모르겠다. 회화였다면 분명 도움이 되었을 작품 사진 혹은 스틸 이미지도 시간 기반 예술에서는 분명한 한계를 드러낸다. 그래서 비평가는 몇 가지 익숙한 선택지를 놓고 고민한다. 가장 쉬운 방법은 내러티브를 건져 내는 것이다. 즉, 시간의 흐름에 따라 전개되는 이야기를 요약하거나 작품의 구성에 따른 장면들을 순서대로 나열한다. 비평가는 그렇게 건져낸 이야기로부터 의미를 가능한 한 하나로 수렴시키거나, 작품의 시간을 넉넉히 포괄할 개념을 제시하기도 한다. 작품 속 시간은 대체로 추상화되고 개념의 타당성과 시의성에 힘입어 보편적이고 전달할 수 있는 시간으로 바꾼다.<br><br>작품 밖 시간으로 성큼 나가는 방법도 있다. 비평가는 작품 속 구체적인 시간은 생략하고, 이 작품이 영상, 퍼포먼스, 이미지의 역사에서 어디쯤 위치하는지, 또는 그 어디에도 위치시키기 어려울 만큼 새로운 시도라고 쓴다. 새로운 매체나 신기술이 사용된 작품이라면 마치 역사성을 저절로 걸어 들어올 것처럼 말한다. 그러나 이렇게 한번 밖으로 나간 비평가는 더 유혹적인 시간, 동시대를 만난다. 작가가 동시대로부터 인정받고 있다는데 역사적 의미 따위가 뭐가 중요하겠는가. 비평가는 나의 시간을 너의 시간으로, 다수의 시간으로 만들기 위해 작품을 역사 안에 밀어 넣거나 아예 그 밖으로 밀어내버린다.<br><br>｢자본시간물질소리｣. 안소현, 『Syncope』. 김태용, 김홍기, 박순아, 안소현, 육호수, 전소정. 오르간프레스. 강문식 디자인. 2023</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

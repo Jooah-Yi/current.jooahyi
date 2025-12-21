@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>광택 있는 종이에 인쇄되어 윤기 나는 백사장</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>｢감정과 징후｣<br><br>이제 내 차례라고<br><br>(…)<br><br>돌아앉은 너는 어느새 흰 털로 뒤덮인 개였다<br><br>작고 규칙적인 숨소리가 들렸다<br><br>허옇게 김 서린 소리였다<br><br>무성한 안개였다<br><br>두 사람의 뒤섞인 흰머리였다<br><br>초록색 방수페인트 위로 얇게 쌓인 눈이었다<br><br>기억을 가로지르는 실금이었다<br><br>장면에 낀 개털이었다<br><br>영혼의 더께였다<br><br>자전거를 덮어둔 비닐이었다<br><br>눈을 감으면 펄럭이는 얼굴이었다.<br><br>먼지 낀 시간이었다<br><br>두 사람의 손이 뽑아낸 흰머리였다<br><br>구름이 인쇄된 포스터 뭉치였다<br><br>땅에 떨어진 구름이었다<br><br>광택 있는 종이에 인쇄되어 윤기 나는 백사장이었다<br><br>김리윤</p>
+  <a href="https://agitate.site">https://agitate.site</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>
+

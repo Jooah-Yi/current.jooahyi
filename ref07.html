@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이는 자연스럽게</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+
+  <p>
+   이는 자연스럽게 AIC의 두 번째 주제어인 ‘비평성’으로 이어집니다. AIC의 비평성은 이미 구획된 제도와 미술사를 대체하기 위한 논리가 아니라, 현실에서 작동 중인 시스템의 자장을 이해하고 그 자리에서부터 비판적 상상력을 발휘하기 위한 장치입니다. 제도 비판이 지닌 미학적 정치성은 예술 창작을 위해 포기되다시피 한 부산물을 돌보는 마음가짐에서 비롯됩니다. 그러한 다정한 태도를 장착한 미술이 감각과 사고의 지형을 바꾸는 가능성을 발견합니다.<br><br><a href="https://www.asianinstitutionalcritique.com">https://www.asianinstitutionalcritique.com</a>
+ </p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

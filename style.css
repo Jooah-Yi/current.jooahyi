@@ -1,0 +1,178 @@
+/* 1. 한글 범위 */
+@font-face {
+  font-family: 'HangulSerif';
+  src: local("Apple SD 산돌명조");
+  unicode-range: U+AC00-UD7AF;
+}
+
+/* 2. 라틴 알파벳 범위 */
+@font-face {
+  font-family: 'Times New Roman';
+  unicode-range: U+0000-007F;
+}
+
+/* 3. 기호 범위 */
+@font-face {
+  font-family: 'SymbolEulyoo';
+  src: url('./fonts/Eulyoo1945-Regular.woff2') format('woff2');
+  unicode-range: 
+    U+201C, U+201D,
+    U+2018, U+2019,
+    U+00AB, U+00BB,
+    U+2039, U+203A,
+    U+002E,
+    U+002C,
+    U+300E, U+300F,
+    U+300C, U+300D;
+}
+
+html, body{
+  font-family:
+    'Times New Roman',
+    'SymbolEulyoo',
+    'HangulSerif',
+    serif;
+  line-height: 1.65;
+  letter-spacing: -0.3px;
+  word-break: keep-all;
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* ------------------------------------
+   HOME LAYOUT
+------------------------------------ */
+
+header{
+  margin-top: 3rem;          /* ref와 일치시키기 위해 제거 */
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+footer {
+  font-family: "Helvetica", sans-serif; 
+  font-weight: 300;
+  padding: 3rem 0;
+  font-size: 0.8rem;
+}
+
+/* ------------------------------------
+   TOP SPACING (ref와 동일)
+------------------------------------ */
+
+body:not(.ref-page) > main {
+  padding-top: calc(env(safe-area-inset-top, 0px) + 0rem);
+}
+
+/* ------------------------------------
+   PAGE CONTROLS
+------------------------------------ */
+
+.page-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  z-index: 9999;
+}
+
+.page-controls button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.page-controls button:hover {
+  opacity: 1;
+  color: #000;
+}
+
+.page-controls button:active {
+  opacity: 0.6;
+}
+
+/* ------------------------------------
+   LINK STYLE
+------------------------------------ */
+
+a,
+a:visited {
+  color: #193a8a;
+  text-decoration: underline;
+  text-underline-offset: 0.17em;
+  text-decoration-thickness: 0.05em;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+a:active {
+  color: #999;
+}
+
+/* ------------------------------------
+   EFFECTS
+------------------------------------ */
+
+.shuffle-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.shuffle-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes flickerAnim {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.4; }
+}
+
+.flicker {
+  animation: flickerAnim 1.4s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* ------------------------------------
+   MOBILE
+------------------------------------ */
+@media (max-width: 600px) {
+  html, body{
+    max-width: none;
+    margin: 0;
+    font-size: 16px; /* 모바일 기본 크기 */
+  }
+
+  header,
+  body:not(.ref-page) > main,
+  footer{
+    padding-inline: calc(env(safe-area-inset-left, 0px) + 16px)
+                    calc(env(safe-area-inset-right, 0px) + 16px);
+  }
+
+  body:not(.ref-page) > main{
+    padding-block-end: 16px;
+  }
+}

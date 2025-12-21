@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>기록시스템</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>물질적 불투명성 / 최적화된 투명성<br><br>현재 미디어 환경에서 인간은 데이터 흐름의 원천도 아니고 목적지도 아니지 않나?<br><br>궁극의 저자는 누구?<br><br>시대착오를 감수하는 변칙적 실천으로써 아카이브<br><br>SeMA 아카데미 이미지와 기록탐구. 4강 프리드리히 키틀러의 기록시스템. 윤원화</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

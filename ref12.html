@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>삼면에 초록색 금장이 입혀져있는</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>Goethe’s Werke: Vollständige Ausgabe letzter Hand Stuttgarter Ausgabe (60 vols.)<br><br>1827년부터 발행해 1842년 60권으로 완간한 괴테(1749-1832)의 문학전집. 1권부터 40권까지는 속표지 왼쪽에 삽화가 1장씩 수록되어 있고, 괴테 사망 후 발행한 41권부터는 삽화가 없다. 책 삼면에 초록색 금장이 입혀져 있는데, 마지막 여섯 권만 붉은색이다. </p>
+  <a href="http://yhdbookmuseum.com/book/8433/">http://yhdbookmuseum.com/book/8433/</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>
+

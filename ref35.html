@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>철현</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>하지만 며칠이 지나 다시 목록을 읽으며 생각했다.<br><br>어떤 의미가 있을까, 이 단어들을 들여다보는 일엔?<br><br>활로 철현을 켜면 슬프거나 기이하거나 새된 소리가 나는 것처럼, 이 단어들로 심장을 문지르면 어떤 문장들이건 흘러 나올 것이다. 그 문장들 사이에 흰 거즈를 덮고 숨어도 괜찮은 걸까.<br><br>『흰』. 한강. 문학동네. 2025</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

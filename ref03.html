@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>나와 꿈과 오른손과 왼손</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+
+    <a href="index.html" class="back-btn">돌아가기</a>
+    
+  <p>요소<br><br>저녁 빛.<br>꿈꾸는 이(‘가’)<br>그의 꿈속 자아(‘나’)<br>꿈속에서의 오른손(‘우’)과 왼손(‘좌’)<br>슈베르트의 리트 ｢나흐트 운트 트로이메｣｢‘밤과 꿈’｣의 마지막 일곱 마디. <br><br>｢나흐트 운트 트로이메｣. 『사뮈엘 베케트 단편극집 1』. 사뮈엘 베케트. 이예원 옮김. 김뉘연, 신선영 편집. 워크룸 프레스. 2025</p>
+  <a href="https://youtu.be/Uj-CZw8PMFY?si=n6QqQHgkNmPQv3cF">https://youtu.be/Uj-CZw8PMFY?si=n6QqQHgkNmPQv3cF</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+
+</script>
+
+</body></html>

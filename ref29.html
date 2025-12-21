@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>반사 패널을 모아</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>Rosa Barba, Radiant Exposures-Facts Run on Light Beams These Days<br><br>16mm 영화 <복사 노출 - 시간은 빛줄기를 따라 흐른다>(제목 일부는 도나 해러웨이의 문장을 인용)는 로사 바바가 오랫동안 주제로 삼아 온 사막과 근대 아카이브 탐구라는 모티프로 돌아가, 진보를 향한 인간의 열망을 표현한다. 이전 작품들과 마찬가지로, <복사 노출 - 시간은 빛줄 기를 따라 흐른다>는 시간과 공간을 초월한, 영적이며 초자연적인 장소를 표현한다.<br><br>이 영화의 주요 모티프는 햇빛을 반사하는 넓은 직사각형 패널들이 인공적으로 만들어낸 풍경이다. 이 반사 패널들은 실제로 햇빛을 모아 에너지를 생성하고 수집한다. 반짝이는 빛과 흐릿한 이미지로 인해 태양의 존재가 더욱 생생하게 드러난다.(로사 바바 스튜디오)(번역: 부산현대미술관)</p>
+
+  <a href="https://www.rosabarba.com/radiant-exposures-2022">https://www.rosabarba.com/radiant-exposures-2022</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

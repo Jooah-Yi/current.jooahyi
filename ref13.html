@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>죽은 천</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>이번 전시의 작품들은 작가의 할머니와 어머니 세대로부터 물려받은 천들을 재료로 삼는 데서 출발한다. 작가는 물려받거나 버려진 ‘죽은 직물(dead fabrics)’ 중 일부를 현미경으로 관찰해 그 조직을 분석하고, 그 구조를 따라 다시 직조하는 과정을 거쳐 재탄생된 형태의 작업을 선보인다. <br><br>버려진 직물들, 다시 양복이나 한복으로 돌아갈 수 없는 '죽은 천'(...)느린 수작업, 씨실과 날실을 한 올 한 올 엮는 지독하게 아날로그적인 행위의 반복이 직조의 필연성이다. 직조는 그 자체로 손의 궤적이고 행위의 흔적이다. 여기서 행위가 곧 표현이고, 시간은 그것의 살아있는 증인이 된다.<br><br>Domestic Resurrection. 차승언. 파이프갤러리 2025.10.30-11.28.</p>
+  <a href="https://pipegallery.com/exhibitions/domestic-resurrection">https://pipegallery.com/exhibitions/domestic-resurrection</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

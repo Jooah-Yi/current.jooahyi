@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대응으로서 시 쓰기</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>그러나 인지 과정이 신경적·신체적·환경적 연합체이며 파편화된 채 빈번히 외부환경에 외주되는 것이라면, 또 동시대 디지털화의 편재가 그러한 외주화 영역을 확장하고 있다면, 창작의 과정과 그 결과물 또한 단일한 주체의 독자적 능력에 의한 것이라 보기 어려울 것이다. 즉 인지 개념의 재고를 통해 인간이라는 구획이 외부환경의 역동적인 침투에 의해 끊임없이 재구성되는 것임을 확인할 수 있으며, 인간과 비안간의 구도를 상정하기에 앞서 동시대 인간이란 어떤 인간인지, 특정 환경에서 인간은 무엇들의 구성요소인지를 돌아볼 수 있다.<br><br>그리고 그 효용이란 과부화된 정동의 해소다. 창작 주체가 해소해야 할 정동의 분량을 창작 매체에 양도 및 원격화하여 대신 반복되도록 하는 것이다. (…) 이처럼 과부화되는 정동 관리를 위한 대응 양상이자 스타일로서 가속류는, 특히 리셋—망각 기제는 인지 자동화를 나날이 가속하는 기술 예속에 대한, 더 크게는 후기자본주의적 위기에 대한 자연스럽고 효율적인 대응으로서 시 쓰기를 암시한다.<br><br>｢클라우드 기술생태계와 ‘기후 시’｣. 최다영, 『비평포럼』. 소영현, 소유정, 양윤의, 박서양, 장은정, 양경언, 이은지, 이소, 김형중, 황정아, 오혜진, 조연정, 김미정, 백지은, 이희우, 최다영, 송현지. 문학과 지성사. 2025</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

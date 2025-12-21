@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>살아 있는 물</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>편집자 주<br><br>Água Viva는 단어 그대로를 직역하면 ‘살아 있는 물’로 번역되고, 일반적으로는 해파리를 의미한다. 이 두 가지 의미에는 공통점이 있다. 뼈대가 없다는 것이다. ‘살아 있는 물’은 뼈대 즉 특정한 형태를 강제하는 구조가 존재하지 않는 자유로운 세계이며, 그 살아 있는 물에 몸을 맡기고 흘러가는 해파리는 그 세계와 가장 닮은 개체다. ‘아구아 비바’라는 제목은 이 둘을 동시에 지칭 혹은 포괄한다.<br><br>형태로부터 자유로운 것, 심지어 세계인 동시에 개체인 것을 그리기. 즉 모든 구조와 경계를 넘어선 그 무엇을 기록하려는 (불가능한) 시도. 이는 이 작품뿐만 아니라 리스펙토르가 늘 추구하던 목표를 집약한 표현이다.<br><br> 『아구아비바』. 클라리시 리스펙토르. 민승남 옮김. 암실문고. 2023</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

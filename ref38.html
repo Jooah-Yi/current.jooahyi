@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>상상적 대상과 지향적 전이</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>아날로공(analogon)<br><br>사르트르에 따르면 지금껏 사람들이 ‘이미지’로 착각해온 것은 사실 ‘아날로공’에 불과하다. 그렇다면 아날로공이란 무엇인가? 아날로공은 상상 이미지가 성립하기 위한 매개 혹은 지지체를 의미한다. 예컨대 오랫동안 만나지 못한 옛 친구의 얼굴을 떠올릴 때 우리는 그의 모습이 담긴 사진이나 그림의 도움을 받을 수 있다. 이때 친구의 얼굴을 지각하고 있다고 착각하게 만드는 매개적 대상(영상, 사진, 초상화, 캐리커처 등)이 바로 아날로공이다. 아날로공은 지각적 대상을 닮은 유사물로, 상상을 위한 기반이 되지만 그 자체로 상상의 대상은 아니다.<br><br>상상은 실제 사물(예컨대 인화된 사진)과 그것이 가리키는 상상적 대상(사진을 통해 떠올리는 옛 친구) 사이에서 일어나는 특유한 지향적 전이를 수반한다. 중요한 것은 사진을 소재로 옛 친구를 이미지로서 떠올릴 때 우리의 관심사는 사진을 구성하는 지각적 차원의 요소들이 아니라는 사실이다. 사진의 구도, 색감, 해상도, 표면의 광택 따위의 실재적 요소들은 우리의 주의를 끌지 못한다. 이러한 요소들에 관심을 갖는 순간 우리는 상상이 아니라 지각의 차원에 진입하게 된다. 그러나 우리의 관심사가 지각이 아니라 상상이라면, 이 사진에서 우리의 관심을 사로잡는 것은 사진에 포착된 앳된 소년의 얼굴이 내 기억에 남 있는 십여 년 전의 친구의 얼굴과 사실이다. 정확히 말하자면 이 소재란 인화지에 현상된 색의 불규칙한 얼룩일 뿐이다. 그럼에도 우리는 전이를 통해 상상의 소재인 아날로공을 초월하고, 지금 그가 현전하지 않는 이곳의 상상의 대상으로서 그를 불러온다.<br><br>『장폴 사르트르』. 이솔. 커뮤니케이션북스. 2025</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

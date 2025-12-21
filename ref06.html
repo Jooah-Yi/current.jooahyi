@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>시간과 시각</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+
+    <a href="index.html" class="back-btn">돌아가기</a>
+
+  <p>
+    한 번은 이타카에서 뉴욕까지 차를 몰고 가는 내내, 하나가 조수석에서 뜨개질을 한 적이 있었다. 그때 이후로 그는 두 도시 사이의 거리가 기껏해야 털실 길이 정도라고 생각하게 되었다.<br><br>『아스테리오스 폴립』. 데이비드 마추켈리. 박중서 옮김. 미메시스. 2010)
+ </p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

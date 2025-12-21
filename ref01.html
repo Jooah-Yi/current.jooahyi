@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>그물망 안에</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+<body class="ref-page"> <main class="fade-in">
+
+<a href="index.html" class="back-btn">돌아가기</a>
+
+  <main class="fade-in">
+  <p>도덕경의 어떤 부분은 산문이고, 어떤 부분은 운문으로 되어 있다. 오늘날 우리가 시를 정의하는 방식, 즉 운율과 리듬이 아니라 언어의 무늬를 이루는 강렬함으로 시를 정의한다면 도덕경은 그 전체가 시다. 나는 이 시의 간결하고 이상한 아름다움을 붙잡고 싶었다. 대부분의 번역본들은 그물망 안에 그 의미를 포획해내기는 했으나 산문적인 방식을 택함으로써 아름다움이 그물망 사이로 빠져나가게 두었다. 시에서 아름다움은 장식이 아니다. 아름다움은 그 자체로 의미이다. 이것이 진실이다. 우리는 그렇게 믿고 있다.<br><br>『노자의 도덕경: 도와 도의 힘에 대한 책』. 어슐라 K.르 귄. 김서경, 박고은 옮김. 고와서 디자인. 데렉하트필드. 2025</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

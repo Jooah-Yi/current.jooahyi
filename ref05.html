@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>사이버웨어와 서정</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+
+    <a href="index.html" class="back-btn">돌아가기</a>
+
+  <p>《엣지러너》의 세계가 그 어떤 변화의 여지없이 닫혀 있으며 애당초 데이비드‘들’을 양산하기 위해 마련된 거대한 실험실이자 무덤이라는 사실을 마침내 내가 깨달은 순간은 바로 이 작품에 등장하는 사이버웨어들의 디자인이 비슷비슷하다는 사실을 인지했을 때다. 사이버웨어들은 (무엇보다 이 애니메이션의 제작사인 스튜디오 트리거의 취향에 따라) 크고 무겁고 투박하다. 무엇보다 (유기체의 몸에 대한 무시에도 불구하고) 끈질기게 인간형을 하고 있다.<br><br>(…) 우리는 이 지점에서 히토 슈타이얼Hito Steyerl의 에세이 중 하나인, ｢사람을 죽이는 방법: 디자인의 문제｣를 참조할 수 있을 것이다. 그는 여기서 “최근에 살해 디자인의 가속화된 버전”이 실험된 도시인 튀르키예 내 쿠르드족 거주 지역인 디야르바키르를 예시로 든다. 이 지역이 국가 폭력에 의해 깨끗이 쓸려나간 것을 보고 그는 “이런 유형의 디자인의 대상들은 궁극적으로 사람들”로, 그것의 목표는 “사람들의 퇴거(필요에 따라서는 처분)”라고 말한다. 그가 언급한 “이런 유형의 디자인”, 즉 살해 디자인”의 특징은 조금 더 인용하자면 다음과 같다. “디자인은 치명적인 테크놀로지를 개량하기 위한 미학을 전개한다. (…) 그것은 가속주의적이며, 소프트웨어와 하드웨어를 접합하고, 비상서한, 프로그램, 형태, 템플릿을 조합한다. 탱크가 데이터베이스와 맞물리고, 화학 물질이 굴착기와 만나고, 소셜 미디어가 최루가스, 언어, 특수 부대, 관리되는 가시성과 마주친다.” 이처럼 “살해 디자인”이란 이질적인 두 요소가 접합되고, 조합되고, 맞물리고, 마주쳐서 결국에는 이음매가 없이 원래 한 몸이었던 것처럼 부드럽게 작동하는 미학을 완성하는 것을 목표로 하는 디자인이다. 이 미학에는 두 요소 간의 차이도, 사이도 필요 없다.(*히토 슈타이얼, ｢사람들을 죽이는 방법: 디자인의 문제｣, 『면세 미술: 지구 내전 시대의 미술』, 김홍기 옮김(서울: 워크룸프레스, 2021), 16-25)<br><br>『진격하는 저급들: 퀴어 부정성과 시각문화』. 이연숙. 미디어버스. 2025
+ </p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

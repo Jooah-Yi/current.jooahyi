@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>바다는 검고, 아이는 흴 것</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>10년이 지나기 전에 아이는 제주도에서, 남태평양의 어느 섬에서, 하와이에 속한 어느 섬에서 프리 다이빙에 나설 것이다. 바다는 검고, 아이는 흴 것이다. 한밤중 가로등 환한 고속도로에 떨어지는 눈송이처럼. 더는 아이가 아닌 아이가 마침내 수면 위로 올라와 오래 참았던 숨을 한꺼번에 들이마실 것이다. 우리는 그 장면을 볼 수 있을까. 볼 수 있다. 이미 보았기 때문이다.<br><br>『우리가 세계에 기입될 때』. 한유주. 워크룸프레스. 2021</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

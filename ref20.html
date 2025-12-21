@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>은유의 수혜자는</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>요컨대 은유로부터의 도피라는 것은 그동안 시가 누릴 수 있었던 인간적이고 즉각적 권위를 부정하는 것이라 할 수 있다. 은유는 무엇보다 짝을 짓는 것이고, 짝짓기의 수혜자는 명백히 관념 쪽인 까닭이다. 은유를 통해 주체는 감정을 방출하고 주체 우위의 방법론을 정초하게 된다. 그러므로 은유를 피한다는 것은 인간 정신의 면면에 가시적으로 결합되어 있는 사물을 해방시키는 일이다. 은유를 버리면 사물이 보조적인 지위에서 벗어나게 된다.<br><br>『표면의 시학–이수명 시론집』. 이수명. 난다. 2018</p>
+
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

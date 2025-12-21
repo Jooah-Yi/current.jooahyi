@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>내용에 대한 강박</title>
+  <link rel="stylesheet" href="ref-style.css">
+</head>
+
+  <body class="ref-page"><main class="fade-in">
+    <a href="index.html" class="back-btn">돌아가기</a>
+  <p>또한 조금 다른 이야기일 수도 있겠습니다만, 저는 도리어 이곳에서 세계문학이 제대로 다루어지지 않는 점에 대한 불만보다는 한국문학계의 내용에 대한 강박이 한국문학과 세계문학을 포함한 이곳의 문학 전체를 흐려온 것이 아닌가 하는 점에 대한 불만이 있습니다. (여기서 내용이라 함은 이를테면 일정한 흐름을 갖춘 서사, 막연하거나 의도적인 공감과 치유 등을 가리킬 수 있겠습니다.) 내용을 무시하자는 이야기가 아닙니다. 필요하다면 의식적으로 내용을 벗어날 수 있는지에 대한 질문입니다. 내용을 벗어나 형식을 본격적으로 다룰 때 발견하고 발명할 수 있는 흥미로운 지점들을 이곳의 문학과 비평이 함께 놓치고 있는 것은 아닌지 하는 의문입니다. 나아가 지면의 글만 읽을 뿐, 그 외 여러 요소들-글과 디자인의 관계, 글을 발표하거나 유통하는 방식 등-을 의식적이든 무의식적이든 배제하고 있다는 생각도 듭니다. 이 생각을 조금 더 확장해보자면, 예술의 새로움이란 대개 반갑기 마련인데 왜 한국문학을 둘러싼 이들은 이곳의 문학의 범주를 스스로 한정하려 하는지 의문이 듭니다. 예를 들면 시각예술이나 다원예술의 범주에서 생성되는 한국의 문학-그 결과가 글이든 글이 아니든-이 분명히 존재하고 있음에도 이들을 비평의 대상으로 삼을 생각 자체를 하지 못하고 있는 듯합니다.<br><br>｢윤아랑 선생님꼐 드리는 첫 번째 메일 겸 답신 2022/5/1 11:11｣. 김뉘연, ｢한국문학의 불가능성에 관한 대화｣. 김뉘연, 윤아랑. 『자음과 모음. 2022 여름』</p>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+    });
+  });
+
+  document.querySelector('.back-btn').addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+    window.location.href = "index.html";
+    }, 500);
+  });
+</script>
+
+</body></html>

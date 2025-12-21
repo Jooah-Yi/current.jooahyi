@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jooah Yi. Currently in Seoul</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400;500&display=swap">
+</head>
+<body>
+
+  <div class="page-controls">
+    <button id="startSpeak"></button>
+  </div>
+
+  <header>
+    <div>Jooah Yi. Currently in Seoul</div>
+  </header>
+
+
+  <div class="shuffle-overlay" id="shuffleOverlay">
+  </div>
+
+ <main class="main">
+  <a href="ref01.html" class="soft-link"> 그물망 안에 </a>
+  <a href="ref02.html" class="soft-link"> 깜빡임 영화 </a>
+  <a href="ref03.html" class="soft-link"> 나와 꿈과 오른손과 왼손 </a>
+  <a href="ref04.html" class="soft-link"> 디지털화된 정동의 메커니즘에 구멍 </a>
+  <a href="ref05.html" class="soft-link"> 사이버웨어와 서정 </a>
+  <a href="ref06.html" class="soft-link"> 시간과 시각 </a>
+  <a href="ref07.html" class="soft-link"> 큰 글자 책등 </a>
+  <a href="ref08.html" class="soft-link"> 음 </a>
+  <a href="ref09.html" class="soft-link"> 낮은 도. 또 낮은 도. </a>
+  <a href="ref10.html" class="soft-link"> 기록시스템 </a>
+  <a href="ref11.html" class="soft-link"> 광택 있는 종이에 인쇄되어 윤기 나는 백사장 </a>
+  <a href="ref12.html" class="soft-link"> 삼면에 초록색 금장이 입혀져 있는 </a>
+  <a href="ref13.html" class="soft-link"> 죽은 천 </a>
+  <a href="ref14.html" class="soft-link"> 불현듯 도약하는 </a>
+  <a href="ref15.html" class="soft-link"> 의미를 벗은 이미지 </a>
+  <a href="ref16.html" class="soft-link"> 호명의 시차 </a>
+  <a href="ref17.html" class="soft-link"> 잊어버린 사실을 위해 멈추는 </a>
+  <a href="ref18.html" class="soft-link"> 내용에 대한 강박 </a>
+  <a href="ref19.html" class="soft-link"> 불가능한 차이 </a>
+  <a href="ref20.html" class="soft-link"> 은유의 수혜자는 </a>
+  <a href="ref21.html" class="soft-link"> 대응으로서 시 쓰기 </a>
+  <a href="ref22.html" class="soft-link"> 블라인드 </a>
+  <a href="ref23.html" class="soft-link"> 물러나기 </a>
+  <a href="ref24.html" class="soft-link"> 질서를 부여하고 </a>
+  <a href="ref25.html" class="soft-link"> 행위하는 </a>
+  <a href="ref26.html" class="soft-link"> 일시적으로 어딘가를 </a>
+  <a href="ref27.html" class="soft-link"> 인용 앞에서 머뭇거리는 </a>
+  <a href="ref28.html" class="soft-link"> 분절과 지속 </a>
+  <a href="ref29.html" class="soft-link"> 반사 패널을 모아 </a>
+  <a href="ref30.html" class="soft-link"> 살아 있는 물 </a>
+  <a href="ref31.html" class="soft-link"> 캔버스들 </a>
+  <a href="ref32.html" class="soft-link"> 단순한 수목의 투영 </a>
+  <a href="ref33.html" class="soft-link"> 바다는 검고, 아이는 흴 것 </a>
+  <a href="ref34.html" class="soft-link"> 아카이브를 욕망의 대상으로 </a>
+  <a href="ref35.html" class="soft-link"> 철현 </a>
+  <a href="ref36.html" class="soft-link"> 탐구하지 않으면서 모두가 그것을 터무시하는 </a>
+  <a href="ref37.html" class="soft-link"> 미분음 </a>
+  <a href="ref38.html" class="soft-link"> 상상적 대상과 지향적 전이 </a>
+
+
+</main>
+
+  <footer>
+    © 2025 이주아
+  </footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const main = document.querySelector(".main");
+  const links = Array.from(main.querySelectorAll("a"));
+  const startBtn = document.getElementById("startSpeak");
+
+  let isPlaying = false;
+  let currentIndex = 0;
+  let flickerTimeout = null;
+  let nextTimeout = null;
+
+  // 오버레이 생성 (기존 구조 유지)
+  const overlay = document.createElement("div");
+  overlay.id = "shuffleOverlay";
+  overlay.className = "shuffle-overlay";
+  overlay.textContent = "";
+  document.body.appendChild(overlay);
+
+  function showShuffleOverlay() {
+    overlay.classList.add("visible");
+    setTimeout(() => overlay.classList.remove("visible"), 1200);
+  }
+
+  function shuffleLinks() {
+    for (let i = links.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [links[i], links[j]] = [links[j], links[i]];
+    }
+    main.innerHTML = "";
+    links.forEach(link => main.appendChild(link));
+    showShuffleOverlay();
+  }
+
+  // 처음 한 번 섞기
+  shuffleLinks();
+
+  // 재생(깜빡임) 사이클 멈추기 공용 함수
+  function stopFlickerCycle() {
+    isPlaying = false;
+    clearTimeout(flickerTimeout);
+    clearTimeout(nextTimeout);
+    links.forEach(link => link.classList.remove("flicker"));
+  }
+
+  // 링크를 순차적으로 깜빡이게 만드는 함수
+  function flickerLinksInOrder() {
+    if (!isPlaying) return;
+    if (currentIndex >= links.length) {
+      stopFlickerCycle();
+      return;
+    }
+
+    const link = links[currentIndex];
+    link.classList.add("flicker");
+
+    // 한 링크가 깜빡이는 시간 (대략 낭독 길이 느낌)
+    const activeDuration = 600 + Math.random() * 1200;
+    // 링크 사이 간격: 기존 코드의 pause 값과 동일한 범위
+    const pause = 400 + Math.random() * 1500;
+
+    flickerTimeout = setTimeout(() => {
+      link.classList.remove("flicker");
+      if (!isPlaying) return;
+
+      currentIndex++;
+      nextTimeout = setTimeout(flickerLinksInOrder, pause);
+    }, activeDuration);
+  }
+
+
+  // 페이지 진입 1초 후 자동 재생 (기존 타이밍 유지)
+  setTimeout(() => {
+    stopFlickerCycle();
+    isPlaying = true;
+    currentIndex = 0;
+    flickerLinksInOrder();
+    startBtn.textContent = "";
+  }, 1400);
+
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // (사실상 동작하지 않는) 클릭 리로드 로직은 그대로 둠
+  document.addEventListener("click", (e) => {
+    const tag = e.target.tagName.toLowerCase();
+    if (tag === "a" || tag === "button") return;
+    if (e.target.closest("body")) return;
+    location.reload();
+  });
+
+  // 커서 존 관련 로직 (기존 유지)
+  document.addEventListener("mousemove", (e) => {
+    const bodyRect = document.body.getBoundingClientRect();
+
+    const inside =
+      e.clientX >= bodyRect.left &&
+      e.clientX <= bodyRect.right &&
+      e.clientY >= bodyRect.top &&
+      e.clientY <= bodyRect.bottom;
+
+    if (inside) {
+      document.documentElement.classList.remove("cursor-zone");
+    } else {
+      document.documentElement.classList.add("cursor-zone");
+    }
+  });
+});
+
+// 링크 클릭 시 페이드아웃 후 이동 (기존 유지)
+document.querySelectorAll(".soft-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 500);
+  });
+});
+</script>
+
+
+
+</body>
+</html>
+
