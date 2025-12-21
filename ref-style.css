@@ -125,7 +125,7 @@ a:active {
   }
 
   .ref-page > main{
-    padding-top: 16px
+    Padding-top: 16px;
     padding-left:  calc(env(safe-area-inset-left, 0px) + 16px);
     padding-right: calc(env(safe-area-inset-right, 0px) + 16px);
     padding-bottom: 16px;
@@ -134,7 +134,7 @@ a:active {
 
 main, main *:not(pre):not(code):not(kbd):not(samp){
   font-family: inherit !important;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .ref-page a {
