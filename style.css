@@ -164,20 +164,25 @@ body.fade-out {
    MOBILE
 ------------------------------------ */
 @media (max-width: 600px) {
-  html, body{
+  html, body {
     max-width: none;
     margin: 0;
     font-size: 16px;
-    padding-top: 16px;
+    padding: 16px;
+
+    padding:
+      calc(env(safe-area-inset-top, 0px) + 16px)
+      calc(env(safe-area-inset-right, 0px) + 16px)
+      calc(env(safe-area-inset-bottom, 0px) + 16px)
+      calc(env(safe-area-inset-left, 0px) + 16px);
   }
 
   header,
   body:not(.ref-page) > main,
-  footer{
-    padding-inline: calc(env(safe-area-inset-left, 0px) + 16px)
-                    calc(env(safe-area-inset-top, 0px) + 16px)
-                    calc(env(safe-area-inset-right, 0px) + 16px);
+  footer {
+    padding: 0;
   }
+}
 
   body:not(.ref-page) > main{
     padding-block-end: 16px;
