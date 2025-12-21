@@ -176,3 +176,19 @@ body.fade-out {
     padding-block-end: 16px;
   }
 }
+
+/* ------------------------------------
+   FORCE SERIF BODY TEXT (MOBILE SAFE)
+------------------------------------ */
+:root{
+  --body-serif: 'Times New Roman','SymbolEulyoo','HangulSerif',serif;
+}
+
+html, body{
+  font-family: var(--body-serif) !important;
+}
+
+/* Keep main content serif even if a reset/UA rule overrides element fonts */
+main, main *:not(pre):not(code):not(kbd):not(samp){
+  font-family: inherit !important;
+}
