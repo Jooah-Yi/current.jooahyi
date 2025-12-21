@@ -129,7 +129,6 @@ a:active {
       'SymbolEulyoo',
       serif !important;
   }
-  }
 
   .ref-page > main{
     padding-left:  calc(env(safe-area-inset-left, 0px) + 16px);
