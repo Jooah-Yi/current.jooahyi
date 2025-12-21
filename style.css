@@ -159,3 +159,31 @@ body.fade-out {
   opacity: 0;
   transition: opacity 0.6s ease;
 }
+
+/* ------------------------------------
+   MOBILE
+------------------------------------ */
+@media (max-width: 600px) {
+  html, body{
+    max-width: none;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .ref-page > main{
+    padding-top: 16px
+    padding-left:  calc(env(safe-area-inset-left, 0px) + 16px);
+    padding-right: calc(env(safe-area-inset-right, 0px) + 16px);
+    padding-bottom: 16px;
+  }
+}
+
+main, main *:not(pre):not(code):not(kbd):not(samp){
+  font-family: inherit !important;
+  font-weight: 400;
+}
+
+.ref-page a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
