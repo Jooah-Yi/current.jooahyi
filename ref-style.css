@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap");
+
 /* 1. 한글 범위 */
 @font-face {
   font-family: 'HangulSerif';
@@ -121,7 +123,13 @@ a:active {
   html, body{
     max-width: none;
     margin: 0;
-    font-size: 16px;
+    font-size: 16px; /* 모바일 기본 크기 */
+      html, body{
+    font-family:
+      "Noto Serif KR",
+      'SymbolEulyoo',
+      serif !important;
+  }
   }
 
   .ref-page > main{
