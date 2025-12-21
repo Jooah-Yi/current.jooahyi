@@ -134,3 +134,8 @@ a:active {
 main, main *:not(pre):not(code):not(kbd):not(samp){
   font-family: inherit !important;
 }
+
+.ref-page a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
