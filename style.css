@@ -170,12 +170,10 @@ body.fade-out {
     max-width: none;
     margin: 0;
     font-size: 16px; /* 모바일 기본 크기 */
-      html, body{
     font-family:
       "Noto Serif KR",
       'SymbolEulyoo',
       serif !important;
-  }
   }
 
   header,
